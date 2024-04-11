@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import { UserProvider } from './contexts/UserContext';
 import { ProductsProvider } from './contexts/ProductsContext';
+import { CartProvider } from './contexts/CartContext';
 
 import './index.scss';
 
@@ -20,7 +22,9 @@ root.render(
   <React.StrictMode>
     <UserProvider>
       <ProductsProvider>
-        <RouterProvider router={router} />
+        <CartProvider>
+          <RouterProvider router={router} />
+        </CartProvider>
       </ProductsProvider>
     </UserProvider>
   </React.StrictMode>
