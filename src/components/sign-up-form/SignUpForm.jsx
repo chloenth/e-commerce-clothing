@@ -4,9 +4,9 @@ import {
   createUserDocumentFromAuth,
 } from '../../utils/firebase/FirebaseUtils';
 import FormInput from '../form-input/FormInput';
+import Button from '../button/Button';
 
 import './styles.scss';
-import Button from '../button/Button';
 
 const defaultFormFields = {
   displayName: '',

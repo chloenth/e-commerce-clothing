@@ -4,9 +4,9 @@ import {
   signInAuthUserWithEmailAndPassword,
 } from '../../utils/firebase/FirebaseUtils';
 import FormInput from '../form-input/FormInput';
+import Button from '../button/Button';
 
 import './styles.scss';
-import Button from '../button/Button';
 
 const defaultFormFields = {
   email: '',
@@ -20,17 +20,14 @@ const SignInForm = () => {
   const resetFormField = () => setFormFields(defaultFormFields);
 
   const signInWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
+    await signInWithGooglePopup();
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const { user } = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
+      await signInAuthUserWithEmailAndPassword(email, password);
 
       resetFormField();
     } catch (error) {
