@@ -3,7 +3,12 @@ import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContext';
 import CheckoutItem from '../../components/checkout-item/CheckoutItem';
 
-import { CheckoutContainer, Header, HeaderBlock } from './checkout-styles.jsx';
+import {
+  CheckoutContainer,
+  Header,
+  HeaderBlock,
+  Total,
+} from './checkout-styles';
 
 const Checkout = () => {
   const { cartItems, addItemToCart, removeItemFromCart, cartTotal } =
@@ -32,7 +37,7 @@ const Checkout = () => {
       {cartItems.map((cartItem) => (
         <CheckoutItem key={cartItem.id} cartItem={cartItem} />
       ))}
-      <span className='total'>Total: €{cartTotal}</span>
+      <Total>Total: €{cartTotal}</Total>
     </CheckoutContainer>
   );
 };
