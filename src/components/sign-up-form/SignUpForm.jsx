@@ -6,7 +6,7 @@ import {
 import FormInput from '../form-input/FormInput';
 import Button from '../button/Button';
 
-import { SignupContainer, Title } from './signupform-styles';
+import { SignupContainer, Title } from './signup-form.styles';
 
 const defaultFormFields = {
   displayName: '',

@@ -6,7 +6,7 @@ import {
 import FormInput from '../form-input/FormInput';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/Button';
 
-import { SigninContainer, Title, ButtonBox } from './signinform-styles';
+import { SigninContainer, Title, ButtonBox } from './signin-form.styles';
 
 const defaultFormFields = {
   email: '',

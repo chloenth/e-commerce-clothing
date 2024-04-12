@@ -2,7 +2,7 @@ import {
   BaseButton,
   GoogleSignInButton,
   InvertedButton,
-} from './button-styles.jsx';
+} from './button.styles.jsx';
 
 // There are 3 types of button
 // - default button

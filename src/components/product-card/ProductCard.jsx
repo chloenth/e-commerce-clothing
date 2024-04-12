@@ -7,7 +7,7 @@ import {
   Name,
   Price,
   ProductCardContainer,
-} from './productcard-styles';
+} from './product-card.styles';
 
 const ProductCard = ({ product }) => {
   const { name, price, imageUrl } = product;

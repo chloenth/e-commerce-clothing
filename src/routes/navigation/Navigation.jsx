@@ -13,7 +13,7 @@ import {
   LogoContainer,
   NavLinks,
   NavLink,
-} from './navigation-styles';
+} from './navigation.styles';
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);

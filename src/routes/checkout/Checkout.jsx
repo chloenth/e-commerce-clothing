@@ -8,7 +8,7 @@ import {
   Header,
   HeaderBlock,
   Total,
-} from './checkout-styles';
+} from './checkout.styles';
 
 const Checkout = () => {
   const { cartItems, addItemToCart, removeItemFromCart, cartTotal } =
