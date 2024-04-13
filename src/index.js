@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
 import { UserProvider } from './contexts/UserContext';
 import { CategoriesProvider } from './contexts/CategoriesContext';
 import { CartProvider } from './contexts/CartContext';
 
 import './index.scss';
+import { store } from './store/store';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,9 @@ root.render(
     <UserProvider>
       <CategoriesProvider>
         <CartProvider>
-          <RouterProvider router={router} />
+          <Provider store={store}>
+            <RouterProvider router={router} />
+          </Provider>
         </CartProvider>
       </CategoriesProvider>
     </UserProvider>
