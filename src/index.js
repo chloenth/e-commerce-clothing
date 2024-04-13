@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Elements } from '@stripe/react-stripe-js';
 
 import { UserProvider } from './contexts/UserContext';
 import { CategoriesProvider } from './contexts/CategoriesContext';
 import { CartProvider } from './contexts/CartContext';
+
+import { stripePromise } from './utils/stripe/stripe.utils';
 
 import './index.scss';
 
@@ -23,7 +26,9 @@ root.render(
     <UserProvider>
       <CategoriesProvider>
         <CartProvider>
-          <RouterProvider router={router} />
+          <Elements stripe={stripePromise}>
+            <RouterProvider router={router} />
+          </Elements>
         </CartProvider>
       </CategoriesProvider>
     </UserProvider>
