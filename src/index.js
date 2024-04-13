@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { UserProvider } from './contexts/UserContext';
 import { CategoriesProvider } from './contexts/CategoriesContext';
 import { CartProvider } from './contexts/CartContext';
 
@@ -22,15 +21,13 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <UserProvider>
-      <CategoriesProvider>
-        <CartProvider>
-          <Provider store={store}>
-            <RouterProvider router={router} />
-          </Provider>
-        </CartProvider>
-      </CategoriesProvider>
-    </UserProvider>
+    <CategoriesProvider>
+      <CartProvider>
+        <Provider store={store}>
+          <RouterProvider router={router} />
+        </Provider>
+      </CartProvider>
+    </CategoriesProvider>
   </React.StrictMode>
 );
 
