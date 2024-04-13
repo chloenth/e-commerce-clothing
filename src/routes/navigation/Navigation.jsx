@@ -1,6 +1,6 @@
 import { Fragment, useContext } from 'react';
 import { useSelector } from 'react-redux';
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
 import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
 
